@@ -23,6 +23,7 @@
 
         <android.support.design.widget.TabLayout
             android:id="@+id/tabs"
+            app:tabTextAppearance="@style/MineCustomTabText"
             style="@style/MyCustomTabLayout"
              />
 

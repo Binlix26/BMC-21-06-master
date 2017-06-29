@@ -29,6 +29,10 @@
 
     </style>
 
+    <style name="MineCustomTabText" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">18sp</item>
+    </style>
+
     <style name="ButtonDesign" parent="Widget.AppCompat.Button">
         <item name="android:layout_width">550dp</item>
         <item name="android:layout_height">70dp</item>
