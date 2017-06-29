@@ -11,9 +11,7 @@
         android:id="@+id/visitorNumberInput"
         android:layout_width="470dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="71dp"
         android:ems="10"
         android:fontFamily="sans-serif-smallcaps"
         android:inputType="phone"
@@ -22,35 +20,31 @@
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="24sp"
-        android:hint="enter phone number"/>
+        android:hint="enter phone number"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="63dp"
+        android:layout_marginTop="144dp"
         android:fontFamily="sans-serif-smallcaps"
         android:padding="10sp"
         android:text="Sign In/ Sign Out "
         android:textColor="#ffffff"
         android:textSize="28sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/visitorNumberSearchButton"
-        android:layout_below="@+id/visitorNumberInput"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="98dp"
         android:text="Search"
         style="@style/ButtonDesign"
 
 
-
-
-
-
-
-         />
+        android:layout_below="@+id/visitorNumberInput"
+        android:layout_centerHorizontal="true" />
 </RelativeLayout>

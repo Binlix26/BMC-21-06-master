@@ -73,13 +73,6 @@
             android:textSize="28sp" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/edit_staff_bt_update"
-        style="@style/ButtonDesign"
-        android:text="Update"
-        android:layout_below="@+id/linearLayout"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="155dp" />
 
     <Button
         android:id="@+id/bt_take_photo"
@@ -91,19 +84,27 @@
         android:text="Change Photo" />
 
     <Button
+        android:id="@+id/edit_staff_bt_update"
+        style="@style/ButtonDesign"
+        android:text="Update"
+        android:layout_marginBottom="30dp"
+        android:layout_above="@+id/edit_staff_bt_delete"
+        android:layout_alignStart="@+id/edit_staff_bt_delete" />
+
+    <Button
         android:id="@+id/backButton"
         style="@style/ButtonDesign"
+        android:text="Back"
         android:layout_alignParentBottom="true"
-        android:layout_alignStart="@+id/edit_staff_bt_update"
-        android:layout_marginBottom="50dp"
-        android:text="Back" />
+        android:layout_alignStart="@+id/edit_staff_bt_delete"
+        android:layout_marginBottom="50dp" />
 
     <Button
         android:id="@+id/edit_staff_bt_delete"
         style="@style/ButtonDesign"
         android:text="Delete"
-        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="60dp" />
+        android:layout_marginBottom="150dp" />
 
 </RelativeLayout>

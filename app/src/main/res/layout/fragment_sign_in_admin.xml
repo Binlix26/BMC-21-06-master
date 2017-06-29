@@ -11,37 +11,37 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="70dp"
+        android:layout_marginTop="111dp"
         android:fontFamily="sans-serif-smallcaps"
         android:padding="10sp"
         android:text="Password:"
         android:textAllCaps="false"
         android:textColor="#ffffff"
         android:textSize="28sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
 
     <EditText
         android:id="@+id/adminPasswordInput"
         android:layout_width="470dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView2"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
+        android:layout_marginTop="83dp"
         android:ems="10"
         android:inputType="textPassword"
         android:textAlignment="center"
         android:textColor="#ffffff"
         android:textSize="28sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_below="@+id/textView2"
+        android:layout_centerHorizontal="true" />
 
     <Button
         android:id="@+id/adminSignInButton"
         style="@style/ButtonDesign"
+        android:layout_marginTop="123dp"
+        android:text="Sign In"
         android:layout_below="@+id/adminPasswordInput"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:text="Sign In" />
+        android:layout_centerHorizontal="true" />
 
 </RelativeLayout>
