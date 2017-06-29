@@ -21,6 +21,7 @@ import com.assignment.binlix26.case_study_bmc.data.BMCContract;
 import com.assignment.binlix26.case_study_bmc.data.BMCContract.VisitorEntry;
 import com.assignment.binlix26.case_study_bmc.home.VisitorCheckInActivity;
 import com.assignment.binlix26.case_study_bmc.model.Visitor;
+import com.assignment.binlix26.case_study_bmc.utility.Utility;
 
 import static com.assignment.binlix26.case_study_bmc.utility.Utility.visitorListFilter;
 
@@ -29,6 +30,7 @@ public class VisitorFragment extends Fragment implements LoaderManager.LoaderCal
     private static final int ALL_LOADER = 101;
     private static final int CHECK_IN_LOADER = 102;
     private static final int CHECK_OUT_LOADER = 103;
+    private static final int VISITOR_TODAY = 104;
 
     private Spinner listFilter;
     ListView listView;
@@ -124,6 +126,8 @@ public class VisitorFragment extends Fragment implements LoaderManager.LoaderCal
             case 2:
                 getLoaderManager().initLoader(CHECK_OUT_LOADER, null, this);
                 break;
+            case 3:
+                getLoaderManager().initLoader(VISITOR_TODAY, null, this);
             default:
                 break;
         }
@@ -167,6 +171,21 @@ public class VisitorFragment extends Fragment implements LoaderManager.LoaderCal
                 );
 
                 return checkOutCursor;
+
+            case VISITOR_TODAY:
+                selection = "date(" + VisitorEntry.COLUMN_SIGN_IN + ")=?";
+                selectionArgs = new String[]{
+                        Utility.getCurrentDate()
+                };
+
+                // Construct the loader
+                Loader<Cursor> visitorToday = new CursorLoader(
+                        getActivity(),
+                        VisitorEntry.CONTENT_URI,
+                        null, selection, selectionArgs, null
+                );
+
+                return visitorToday;
             default:
                 return null;
         }

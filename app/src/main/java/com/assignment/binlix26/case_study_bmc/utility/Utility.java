@@ -3,8 +3,6 @@ package com.assignment.binlix26.case_study_bmc.utility;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 
-import com.assignment.binlix26.case_study_bmc.R;
-
 import java.io.ByteArrayOutputStream;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
@@ -19,7 +17,7 @@ import java.util.List;
 public class Utility {
 
     public static List<String> purposeList = Arrays.asList("General Business", "Drop In", "Scheduled Appointment", "Other");
-    public static List<String> visitorListFilter = Arrays.asList("All", "Check In", "Check Out");
+    public static List<String> visitorListFilter = Arrays.asList("All", "Check In", "Check Out", "Today");
     public static Bitmap bitmap;
     public static String password = "admin";
 
@@ -39,5 +37,11 @@ public class Utility {
     // convert from byte array to bitmap
     public static Bitmap toBitmapImage(byte[] image) {
         return BitmapFactory.decodeByteArray(image, 0, image.length);
+    }
+
+    public static String getCurrentDate() {
+        DateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Calendar cal = Calendar.getInstance();
+        return dateFormat.format(cal.getTime());
     }
 }
